@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: "sidebar header"
+    "sidebar main";
+}
+header {
+    grid-area: header;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.main-content {
+    grid-area: main;
+}
