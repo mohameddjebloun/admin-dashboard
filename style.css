@@ -65,7 +65,7 @@ header {
     background-color: var(--blue);
     padding: 0.5rem 1.5rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     font-size: 1rem;
     font-weight: 700;
@@ -80,7 +80,7 @@ header {
     height: 3rem;
     background-color: var(--gray);
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .search-bar>svg {
     margin-top: 1rem;
@@ -101,8 +101,8 @@ header {
     object-fit: cover;
 }
 .user-greet>img {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     object-fit: cover;
     grid-area: image;
@@ -110,16 +110,24 @@ header {
     padding: 0;
     margin-top: 0.5rem;
 }
+.user-notif>p{
+    font-size: 1.25rem;
+    font-weight: 900;
+}
 .user-greet>.greet {
     grid-area: greet;
     margin: 0;
     padding: 0;
     margin-top: 0.5rem;
     margin-bottom: 0;
+    font-weight: 900;
+    font-size: 0.75rem;
 }
 .user-greet>.username {
     grid-area: username;
     margin: 0;
     padding: 0;
     margin-top: 0;
+    font-weight: 900;
+    font-size: 1.25rem;
 }
