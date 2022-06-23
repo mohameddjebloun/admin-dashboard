@@ -1,3 +1,6 @@
+:root {
+    --blue: #3c99d3;
+}
 body {
     margin: 0;
     padding: 0;
@@ -9,10 +12,54 @@ body {
 }
 header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "search-bar user-notif"
+    "user-greet header-buttons";
 }
 .sidebar {
     grid-area: sidebar;
 }
 .main-content {
     grid-area: main;
+}
+.search-bar {
+    grid-area: search-bar;
+}
+.user-notif {
+    grid-area: user-notif;
+}
+.user-greet {
+    grid-area: user-greet;
+}
+.header-buttons {
+    grid-area: header-buttons;
+}
+.header-buttons>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.header-buttons>ul>li>button {
+    background-color: var(--blue);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 30%;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+.header-buttons>ul>li>button:hover {
+    opacity: 70%;
+}
+.search-bar>input {
+    width: 75%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5%;
 }
