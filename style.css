@@ -1,5 +1,6 @@
 :root {
     --blue: #3c99d3;
+    --gray:#dcdcdc;
 }
 body {
     margin: 0;
@@ -26,12 +27,25 @@ header {
 }
 .search-bar {
     grid-area: search-bar;
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 .user-notif {
     grid-area: user-notif;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
 }
 .user-greet {
     grid-area: user-greet;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "image greet"
+    "image username";
+    width: 0.5rem;
+    gap: 1rem;
 }
 .header-buttons {
     grid-area: header-buttons;
@@ -46,7 +60,7 @@ header {
     background-color: var(--blue);
     padding: 0.5rem 1.5rem;
     border: none;
-    border-radius: 30%;
+    border-radius: 10px;
     color: white;
     font-size: 1rem;
     font-weight: 700;
@@ -56,10 +70,51 @@ header {
     opacity: 70%;
 }
 .search-bar>input {
+    padding: 0.25rem;
     width: 75%;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    background-color: lightgray;
+    height: 3rem;
+    background-color: var(--gray);
     border: none;
-    border-radius: 5%;
+    border-radius: 10px;
+}
+.search-bar>svg {
+    margin-top: 1rem;
+}
+.user-notif>svg {
+    margin-top: 0.75rem;
+}
+.user-notif>svg>path {
+    color: var(--gray);
+}
+.user-notif>svg>path:hover {
+    color: black;
+}
+.user-notif>img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-greet>img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-area: image;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+.user-greet>.greet {
+    grid-area: greet;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+.user-greet>.username {
+    grid-area: username;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
 }
