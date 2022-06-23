@@ -1,4 +1,9 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./fonts/Roboto/Roboto-Light.ttf);
+}
 :root {
+    font-family: 'Roboto',sans-serif;
     --blue: #3c99d3;
     --gray:#dcdcdc;
 }
