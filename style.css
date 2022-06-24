@@ -41,7 +41,7 @@ header {
     grid-template-rows: repeat(2,1fr);
     grid-template-areas: "projects announcements"
     "projects trending";
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
 }
 .search-bar {
@@ -239,4 +239,37 @@ header {
       transition: 400ms;
       border: none;
       background-color: white;
+}
+.trending>ul {
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.trending>ul>li {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: 1.5rem 1.5rem;
+    grid-template-areas: "image usertag"
+    "image project";
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.trending>ul>li>h5 {
+    grid-area: usertag;
+    margin-left: 10px;
+    align-self: center;
+}
+.trending>ul>li>p {
+    grid-area: project;
+    margin-left: 10px;
+    align-self: center;
+}
+.trending>ul>li>img {
+    grid-area: image;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
