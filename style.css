@@ -5,7 +5,7 @@
 :root {
     font-family: 'Roboto',sans-serif;
     --blue: #3c99d3;
-    --gray:#dcdcdc;
+    --gray:rgba(220,220,220,0.2);
 }
 body {
     margin: 0;
@@ -35,6 +35,13 @@ header {
 }
 .main-content {
     grid-area: main;
+    background-color: var(--gray);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "projects announcements"
+    "projects trending";
+    gap: 10px;
 }
 .search-bar {
     grid-area: search-bar;
@@ -152,4 +159,13 @@ header {
 }
 .sidebar>div>ul>li>a>svg {
     padding-right: 0.5rem;
+}
+.projects {
+    grid-area: projects;
+}
+.announcements {
+    grid-area: announcements;
+}
+.trending {
+    grid-area: trending;
 }
