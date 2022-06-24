@@ -2,8 +2,11 @@
 const starBtns = document.querySelectorAll(".star");
 const viewBtns = document.querySelectorAll(".view");
 const shareBtns = document.querySelectorAll(".share");
+//Create the announcementsBtn variable that stores all the x buttons
+const announcementsBtn = document.querySelectorAll(".announcements>ul>li>button");
 //Call the functions
 toggleBtn();
+deleteAnnouncement();
 //Create the function toggleBtn that adds a click event listener to all svg buttons
 function toggleBtn(){
     //Add a click event listener for each star button
@@ -42,4 +45,14 @@ function toggleBtn(){
             }
         })
     });
+}
+//Create the function deleteAnnouncement that adds a click event listener to all x buttons
+function deleteAnnouncement(){
+    //Add a click event listener for each x button
+    announcementsBtn.forEach((button)=> {
+        button.addEventListener("click",()=>{
+            //Delete the announcement
+            button.parentNode.remove(); 
+        })
+    })
 }
